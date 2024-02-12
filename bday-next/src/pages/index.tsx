@@ -123,6 +123,20 @@ export default function Home() {
       Birth_day: 27,
     },
     {
+      ID: "CTD-17Test",
+      Name: "Test",
+      Birthday: "2/12/1995",
+      Birth_month: 2,
+      Birth_day: 12,
+    },
+    {
+      ID: "CTD-17Test",
+      Name: "Test",
+      Birthday: "2/13/1995",
+      Birth_month: 2,
+      Birth_day: 13,
+    },
+    {
       ID: "CTD-18",
       Name: "Syeda Sadia Hasan Gunjan",
       Birthday: "11/8/1995",
@@ -253,7 +267,9 @@ export default function Home() {
 
   const today = new Date();
   const today_date = today.getDate();
-  const today_month = today.getMonth();
+  const today_month = today.getMonth() + 1;
+  console.log(today_date, today_month);
+
   const day_match = (day: Number, month: Number) =>
     today_date === day && today_month === month;
 
@@ -298,7 +314,7 @@ export default function Home() {
                   "p-5 border-collapse border border-blue-500",
                   today_month === employee.Birth_month ? " bg-green-300" : "",
                   day_match(employee.Birth_day, employee.Birth_month)
-                    ? "bg-green-300"
+                    ? "bg-green-400 font-bold"
                     : ""
                 )}
               >
@@ -310,7 +326,7 @@ export default function Home() {
                   "p-5 border-collapse border border-blue-500",
                   today_month === employee.Birth_month ? " bg-green-300" : "",
                   day_match(employee.Birth_day, employee.Birth_month)
-                    ? "bg-green-300"
+                    ? "bg-green-400 font-bold"
                     : ""
                 )}
               >
@@ -322,7 +338,7 @@ export default function Home() {
                   "p-5 border-collapse border border-blue-500",
                   today_month === employee.Birth_month ? " bg-green-300" : "",
                   day_match(employee.Birth_day, employee.Birth_month)
-                    ? "bg-green-300"
+                    ? "bg-green-400 font-bold"
                     : ""
                 )}
               >
@@ -334,7 +350,7 @@ export default function Home() {
                   "p-5 border-collapse border border-blue-500",
                   today_month === employee.Birth_month ? " bg-green-300" : "",
                   day_match(employee.Birth_day, employee.Birth_month)
-                    ? "bg-green-300"
+                    ? "bg-green-400 font-bold"
                     : ""
                 )}
               >
